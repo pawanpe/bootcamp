@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Register Student</title>
+	{% include 'snippets/css.html' %}
+</head>
+<body>
+
+	<div class="container">
+	{% include 'snippets/nav.html'%}
+	<form method='POST'> {% csrf_token %} <!-- csrf prevent user input details to show up in the address bar when user clicks submit button. Also it overrides default GET to POST-->
+		<h3>Please fill in the details to enroll!</h3>
+		<!--input type="text" name="Name" placeholder="Student's Name"><br/>
+		<input type="text" name="Date" placeholder="Choose date"><br/>
+		<input id="emailAddress" type="email" name="Email" placeholder="Enter email"><br/-->
+		{{ form.as_p }}
+		<button type="submit">Submit</button>
+		<button type="button">Retrieve</button>
+	</form>
+	</div>
+	{% include 'snippets/js.html' %}
+</body>
+</html>

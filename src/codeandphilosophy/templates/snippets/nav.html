@@ -1,0 +1,7 @@
+<h1>Welcome to Code And Philosophy!</h1>
+
+<a href="{% url "registerStudent:add-student-create" %}">Register</a>
+ <!--registerStudent:add-student-create is used because registerStudent has its own url and include()ed into main urls.py-->
+<a href="{% url "retrieve" %}">RetrieveRegistration</a>
+<a href="{% url "about" %}">About</a>
+<a href="{% url "contact" %}">Contact</a>
